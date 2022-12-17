@@ -1,0 +1,73 @@
+#include <Servo.h>
+
+void setup() {
+  
+  //<servo_name>.attach(<pin_number>)
+  servo9.attach(3);
+  servo10.attach(4);
+  servo11.attach(5);
+  servo12.attach(6);
+
+  //attaching ldr to arduino pins and setting them as input
+  pinMode(9,INPUT);
+  pinMode(10,INPUT);
+  pinMode(11,INPUT);
+  pinMode(12,INPUT);
+}
+int i=0
+int j=0
+void loop() {
+  //one loop in start to reset servos to base position
+  for (i<=0){
+    servo9.write(5);
+    servo10.write(0);
+    servo11.write(0);
+    servo12.write(15);
+    i=10;
+  }
+
+  //loop to wait till start button is pressed
+  for (j<=0){
+    if (digitalRead(10)!=1){
+      j=j+10;
+      break;
+    }
+  }
+
+
+  '''
+  block to code to check if a ldr detects black bar and click after a set delay
+  first delay waits after black bar reaches the servo click region after reaching ldr
+  the first write command rotates the servo so that that the attached arm clicks the phone
+  the second delay is to tell the code to wait till the servo reaches the first position
+  the second write command rottes the servo back to the base position
+  '''
+
+  if (digitalRead(9)==1){
+    delay(90);
+    servo9.write(20);
+    delay(80);
+    servo9.write(5);
+  }
+  else if (digitalRead(10)==1){
+    delay(135);
+    servo9.write(15);
+    delay(80);
+    servo9.write(0);
+  }
+  if (digitalRead(11)==1){
+    delay(125);
+    servo9.write(15);
+    delay(80);
+    servo9.write(0);
+  }
+  if (digitalRead(12)==1){
+    delay(90);
+    servo9.write(20);
+    delay(80);
+    servo9.write(5);
+  }
+  delay(10)
+  //the first delay in each conditional statement and the base/phone positions of servos may vary with different dimensions/builds/designs.
+
+}
