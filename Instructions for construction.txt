@@ -1,0 +1,13 @@
+1) On the base make a place for the phone to steadily be in place and using measurement of the game screen make places for the servos to sit relatively higher compared to the phones base.
+2) Make servo arms long enough to reach from servos to phone, these will replicate the human finger for the touch
+	2.1) At the point of contact between arm and phone, on the arm attach some conducting material which we will ground in arduino to induce capacitive touch on the screen.
+3) Make a sort of holding board/place for the ldrs to hold them steadily above the phone, one ldr dedicated to each lane in the game.
+4) Assemble everything in such a way that each lane in the game gets one ldr and its one corresponding servo.
+5) Make the connections to the breadboard and the arduino and upload the code.
+6) Check the base position and click position for each servo and delay with respect to each ldr and corresponding servo and update the code before uploading to arduino.
+7) turn on the system and test.
+
+Caution:
+#do not use arudion as power supply for servo like the ldr as servos require 6V or current and will short the system.
+#do not use glue to stick ldr or arduino as they have open connections on their board and it migh disrupt or permanently damage them. use double stick tape
+#handle each component with care.
