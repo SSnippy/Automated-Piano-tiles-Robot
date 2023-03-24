@@ -1,6 +1,10 @@
 #include <Servo.h>
 
 //Run this code ones to bring all servos to base position
+Servo servo9;
+Servo servo10;
+Servo servo11;
+Servo servo12;
 
 void setup() {
   
